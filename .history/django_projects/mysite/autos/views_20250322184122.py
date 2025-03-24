@@ -7,9 +7,11 @@ from django.urls import reverse_lazy
 from autos.models import Auto, Make
 from autos.forms import MakeForm
 
+##TODO create a view for the auto list, auto create, auto update, auto delete,
+##TODO make list, make create, make update, make delete
+
 # Create your views here.
-
-
+#show a list of all autos for editing
 class MainView(LoginRequiredMixin, View):
     def get(self, request):
         mc = Make.objects.count()
@@ -18,7 +20,7 @@ class MainView(LoginRequiredMixin, View):
         ctx = {'make_count': mc, 'auto_list': al}
         return render(request, 'autos/auto_list.html', ctx)
 
-
+#show a list of all "makes" for editing
 class MakeView(LoginRequiredMixin, View):
     def get(self, request):
         ml = Make.objects.all()
