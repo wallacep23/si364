@@ -31,12 +31,29 @@ class HouseCreate(LoginRequiredMixin, CreateView):
     model = House
     fields = '__all__'
     success_url = reverse_lazy('wizards:all')
+
 class HouseUpdate(LoginRequiredMixin, UpdateView):
     model = House
     fields = '__all__'
     success_url = reverse_lazy('wizards:all')
+
 class HouseDelete(LoginRequiredMixin, DeleteView):
     model = House
+    fields = '__all__'
+    success_url = reverse_lazy('wizards:all')
+
+class WizardCreate(LoginRequiredMixin, CreateView):
+    model = Wizard
+    fields = '__all__'
+    success_url = reverse_lazy('wizards:all')
+
+class WizardUpdate(LoginRequiredMixin, UpdateView):
+    model = Wizard
+    fields = '__all__'
+    success_url = reverse_lazy('wizards:all')
+
+class WizardDelete(LoginRequiredMixin, DeleteView):
+    model = Wizard
     fields = '__all__'
     success_url = reverse_lazy('wizards:all')
 
@@ -104,22 +121,7 @@ class HouseDelete(LoginRequiredMixin, DeleteView):
 # These views do not need a form because CreateView, etc.
 # Build a form object dynamically based on the fields
 # value in the constructor attributes
-class WizardCreate(LoginRequiredMixin, CreateView):
-    model = Wizard
-    fields = '__all__'
-    success_url = reverse_lazy('wizards:all')
 
-
-class WizardUpdate(LoginRequiredMixin, UpdateView):
-    model = Wizard
-    fields = '__all__'
-    success_url = reverse_lazy('wizards:all')
-
-
-class WizardDelete(LoginRequiredMixin, DeleteView):
-    model = Wizard
-    fields = '__all__'
-    success_url = reverse_lazy('wizards:all')
 
 # We use reverse_lazy rather than reverse in the class attributes
 # because views.py is loaded by urls.py and in urls.py as_view() causes

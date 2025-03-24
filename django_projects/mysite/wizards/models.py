@@ -16,11 +16,11 @@ class Wizard(models.Model):
         max_length=200,
         validators=[MinLengthValidator(1,"Nickname must be greater than 1 character")]
     )
-    power = models.PositiveIntegerField
+    power = models.PositiveIntegerField(default=0, null = False)
     spell = models.CharField(max_length=300)
     house = models.ForeignKey(House,on_delete=models.CASCADE, null = False)
 
     def __str__(self):
         return self.nickname
-    
+
 
