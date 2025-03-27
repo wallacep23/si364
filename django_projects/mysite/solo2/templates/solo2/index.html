@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body><h1>Welcome to Homework TimeCode_8606</h1>
+    {% if reversed_string %}
+        <p>Your result is {{ reversed_string }}</p>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            <label for="field1">Field1:</label>
+            <input type="text" id="field1" name="field1" value="" />
+        </div>
+        <div>
+            <label for="field2">Field2:</label>
+            <input type="text" id="field2" name="field2" value="" />
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    <!-- Hello to  everyone doing a view source -- Chuck -->
+    <script>
+    console.log('Hello to  everyone running the browser debugger -- Chuck');
+    </script>
+</body>
+</html>

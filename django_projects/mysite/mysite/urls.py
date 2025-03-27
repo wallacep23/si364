@@ -16,6 +16,7 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')), 
     path('autos/', include('autos.urls')),  
     path('wizards/', include('wizards.urls')),    
+    path('solo2', include('solo2.urls')),
     path('', TemplateView.as_view(template_name='home/main.html')),
     re_path(r'^site/(?P<path>.*)$', serve,
         {'document_root': SITE_ROOT, 'show_indexes': True},
