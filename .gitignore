@@ -1,9 +1,4 @@
-
 .*
 dj4e-samples/
 .history/
-django_project/mysite/**/__pycache__/
-django_project/mysite/__pycache__/
-django_project/mysite/**/migrations/
-django_project/mysite/**/__init__.py
 README.txt
