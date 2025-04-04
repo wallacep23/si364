@@ -1,4 +1,9 @@
-.ssh/id_ed25519
-.ssh/id_ed25519.pub
+
+.*
 dj4e-samples/
 .history/
+django_project/mysite/**/__pycache__/
+django_project/mysite/__pycache__/
+django_project/mysite/**/migrations/
+django_project/mysite/**/__init__.py
+README.txt

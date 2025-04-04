@@ -7,17 +7,17 @@
     {% endif %}
     <form method="post">
         {% csrf_token %}
-        <div>
-            <label for="field1">Field1:</label>
-            <input type="text" id="field1" name="field1" value="" />
-        </div>
-        <div>
-            <label for="field2">Field2:</label>
-            <input type="text" id="field2" name="field2" value="" />
-        </div>
-        <div>
-            <button type="submit">Submit</button>
-        </div>
+        <p>
+            Field1:
+            <input type="text" name="field1">
+        </p>
+        <p>
+            Field2:
+            <input type="text" name="field2">
+        </p>
+        <p>
+            <input type="submit" value="Submit">
+        </p>
     </form>
     <!-- Hello to  everyone doing a view source -- Chuck -->
     <script>
