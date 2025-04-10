@@ -33,9 +33,6 @@
 <img style="float:right; max-width:50%;" src="{% url 'ads:ad_picture' ad.id %}"
     onclick="document.getElementById('overlay').style.display = 'block';">
 {% endif %}
-<p>
-{{ ad.text }}
-</p>
 <p>{{ ad.text }}</p>
 <p>Price: ${{ ad.price }}</p>
 <p>
