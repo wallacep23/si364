@@ -21,7 +21,7 @@ class AdListView(OwnerListView):
 
 class AdDetailView(OwnerDetailView):
     model = Ad
-    tempalte_name = 'ads/ad_detail.html'
+    template_name = 'ads/ad_detail.html'
     def get(self, request, pk) :
         x = get_object_or_404(Ad, id=pk)
         comments = Comment.objects.filter(ad=x).order_by('-updated_at')
