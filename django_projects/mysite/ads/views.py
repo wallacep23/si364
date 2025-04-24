@@ -127,7 +127,7 @@ class AddFavoriteView(LoginRequiredMixin, View):
     def post(self, request, pk) :
         print("Add PK",pk)
         t = get_object_or_404(Ad, id=pk)
-        fav = Fav(user=request.user, thing=t)
+        fav = Fav(user=request.user, ad=t)
         try:
             fav.save()  # In case of duplicate key
         except IntegrityError:
@@ -140,7 +140,7 @@ class DeleteFavoriteView(LoginRequiredMixin, View):
         print("Delete PK",pk)
         t = get_object_or_404(Ad, id=pk)
         try:
-            Fav.objects.get(user=request.user, thing=t).delete()
+            Fav.objects.get(user=request.user, ad=t).delete()
         except Fav.DoesNotExist:
             pass
 
